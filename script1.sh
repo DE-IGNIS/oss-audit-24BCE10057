@@ -1,18 +1,35 @@
 #!/bin/bash
-# Script 1: System Identity Report
-# Author: [Your Name] | Course: Open Source Software
-# --- Variables ---
-STUDENT_NAME="Sudarsh Karan Chauhan" # Fill in your name
-SOFTWARE_CHOICE="GIT Version Control" # Fill in your chosen software
-# --- System info ---
+# Author: Sudarsh Karan Chauhan | Roll: 24BCE10057
+# script for os system info 
+# oss capstone
+
+# we are making use of cut to extract the name with tr to remove quotes
+
+MY_NAME="Sudarsh Karan Chauhan" # My full name
+PROJECT_CHOICE="GIT Version Control" # the software i have chosen for the project
+
+DISTRO_NAME=$(grep '^PRETTY_NAME=' /etc/os-release | cut -d= -f2 | tr -d '"')
 KERNEL=$(uname -r)
 USER_NAME=$(whoami)
+HOME_DIR="$HOME"
 UPTIME=$(uptime -p)
-# --- Display ---
-echo "================================"
-echo " Open Source Audit — $STUDENT_NAME"
-echo "================================"
+CURR_DATE=$(date)
+
+# most linux systems use the linux kernel
+LIC="This Linux system is based on the Linux kernel, which is licensed GNU GPL v2."
+
+echo "#############################################"
+echo " Welcome to your Linux System Identity Report"
+echo "#############################################"
+echo "Student : $MY_NAME"
+echo "Project : $PROJECT_CHOICE"
+echo "#############################################"
+echo "OS : $DISTRO_NAME"
 echo "Kernel : $KERNEL"
 echo "User : $USER_NAME"
-echo "Uptime : $UPTIME"
-# TODO: Add distro name, date, and license message
+echo "Home : $HOME_DIR"
+echo "OS Uptime : $UPTIME"
+echo "Latest Date/Time : $CURR_DATE"
+echo "License Info : $LIC"
+# echo "script ran successfully"
+echo "#############################################"
