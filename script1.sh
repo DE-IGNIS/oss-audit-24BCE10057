@@ -1,12 +1,12 @@
 #!/bin/bash
-# Author: Sudarsh Karan Chauhan | Roll: 24BCE10057
-# script for os system info 
 # oss capstone
+# Script 1: System Identity Report
+# Author: Sudarsh Karan Chauhan | Roll: 24BCE10057 
+# Software Choice: Git Version Control
 
 # we are making use of cut to extract the name with tr to remove quotes
-
 MY_NAME="Sudarsh Karan Chauhan" # My full name
-PROJECT_CHOICE="GIT Version Control" # the software i have chosen for the project
+PROJECT_CHOICE="Git Version Control" # the software i have chosen for the project
 
 DISTRO_NAME=$(grep '^PRETTY_NAME=' /etc/os-release | cut -d= -f2 | tr -d '"')
 KERNEL=$(uname -r)
@@ -19,7 +19,7 @@ CURR_DATE=$(date)
 LIC="This Linux system is based on the Linux kernel, which is licensed GNU GPL v2."
 
 echo "#############################################"
-echo " Welcome to your Linux System Identity Report"
+echo "      $SOFTWARE Open Source Audit"
 echo "#############################################"
 echo "Student : $MY_NAME"
 echo "Project : $PROJECT_CHOICE"
