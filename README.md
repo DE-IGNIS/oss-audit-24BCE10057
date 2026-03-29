@@ -3,7 +3,7 @@
 - **Course:** Open Source Software (NGMC)
 - **Project:** OSS Capstone — Open Source Audit
 - **Chosen Software:** Git
-- **Repository Name:** oss-audit-24BCE11520
+- **Repository Name:** oss-audit-24BCE10057
 
 ---
 
@@ -19,11 +19,11 @@ Along with the written report, this repository has five shell scripts that demon
 
 | File | What it does |
 |------|-------------|
-| `script1_system_info.sh` | Prints a welcome screen with Linux system details |
-| `script2_package_inspector.sh` | Checks if Git (or another package) is installed and describes it |
-| `script3_disk_auditor.sh` | Loops through system directories and shows size + permissions |
-| `script4_log_analyzer.sh` | Reads a log file, counts lines matching a keyword |
-| `script5_manifesto_generator.sh` | Asks 3 questions, builds a personal open source statement |
+| `script1.sh` | Prints a welcome screen with Linux system details |
+| `script2.sh` | Checks if Git (or another package) is installed and describes it |
+| `script3.sh` | Loops through system directories and shows size + permissions |
+| `script4.sh` | Reads a log file, counts lines matching a keyword |
+| `script5.sh` | Asks 3 questions, builds a personal open source statement |
 | `README.md` | This file |
 
 The project report PDF is submitted separately on the VITyarthi portal.
@@ -37,11 +37,11 @@ The project report PDF is submitted separately on the VITyarthi portal.
 Open your terminal and run this once:
 
 ```bash
-chmod +x script1_system_info.sh
-chmod +x script2_package_inspector.sh
-chmod +x script3_disk_auditor.sh
-chmod +x script4_log_analyzer.sh
-chmod +x script5_manifesto_generator.sh
+chmod +x script1.sh
+chmod +x script2.sh
+chmod +x script3.sh
+chmod +x script4.sh
+chmod +x script5.sh
 ```
 
 ---
@@ -72,11 +72,11 @@ bash script1_system_info.sh
 **Run it:**
 ```bash
 # Check git (default)
-bash script2_package_inspector.sh
+bash script2.sh
 
 # Check a different package
-bash script2_package_inspector.sh python3
-bash script2_package_inspector.sh apache2
+bash script2.sh python3
+bash script2.sh apache2
 ```
 
 **Dependencies:** Git must be installed to see version info. Install it with:
@@ -95,7 +95,7 @@ sudo dnf install git        # Fedora
 
 **Run it:**
 ```bash
-bash script3_disk_auditor.sh
+bash script3.sh
 ```
 
 **Note:** Some directories like `/opt` may show very small sizes or be missing on minimal installs — that is normal.
@@ -113,11 +113,11 @@ bash script3_disk_auditor.sh
 **Run it:**
 ```bash
 # Default: looks for ERROR in /var/log/syslog
-bash script4_log_analyzer.sh
+bash script4.sh
 
 # Custom file and keyword
-bash script4_log_analyzer.sh /var/log/syslog WARNING
-bash script4_log_analyzer.sh /var/log/auth.log Failed
+bash script4.sh /var/log/syslog WARNING
+bash script4.sh /var/log/auth.log Failed
 ```
 
 **Dependencies:** You need to have a readable log file. Common ones:
@@ -130,7 +130,7 @@ If you do not have any of these, create a test file:
 echo "ERROR: something broke" > test.log
 echo "INFO: system started" >> test.log
 echo "ERROR: disk full" >> test.log
-bash script4_log_analyzer.sh test.log ERROR
+bash script4.sh test.log ERROR
 ```
 
 ---
@@ -143,7 +143,7 @@ bash script4_log_analyzer.sh test.log ERROR
 
 **Run it:**
 ```bash
-bash script5_manifesto_generator.sh
+bash script5.sh
 ```
 
 The script will ask you three questions, then save a file called `manifesto_[yourusername].txt` in the same directory.
