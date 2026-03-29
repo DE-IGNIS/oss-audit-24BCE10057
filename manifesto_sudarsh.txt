@@ -1,0 +1,7 @@
+THE OPEN SOURCE MANIFESTO
+Created by: sudarsh on 29 March 2026
+#######################################
+While others build commercial tools, I choose to build bridges through open source softwares that powers the world's infrastructure.
+Open source software such as Git is a means to build my imagination to reality , empowers my creativity and helps me turn my ideas into reality.
+To me, software freedom is defined by Creativity.
+I am planning to build Full Stack Web Application to help others grow and to contribute to the community.
